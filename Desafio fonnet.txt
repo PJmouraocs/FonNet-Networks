@@ -1,0 +1,29 @@
+Crie um Dashboard em Power BI para a empresa "Lojas EletroGama" avaliando as seguintes situações:
+a) Comparativo entre o faturamento dos anos de 2021 e 2022 ok
+b) Crescimento das Vendas Ano a Ano OK
+c) Crescimento das Vendas Mês a Mês OK
+d) Demonstre o volume de vendas por localidade ok
+e) Top 10 das lojas com  mais vendas
+f) Avalie a venda de produtos demostrando os 05 produtos com mais saída e 05 menos saída
+g) Faça uma demonstração das devoluções avaliando o Volume de venda por loja e por motivo de devolução e quais SKU's apresentam mais defeito
+h) Trace o perfil dos Clientes da Loja por idade , Genero, Estado Civil e Nível Escolar
+
+Atue como especialista em Power BI e crie um tutorial passo a passo para criar uma visualização de cartão no Power BI para a empresa Lojas EletroGama com o faturamento total do ano de 2021 e do  ano de 2022.
+
+A empresa forneceu as seguintes tabelas com as colunas aseguir.
+
+Base de Vendas 2022 tem as colunas: Data da Venda, Ordem de Compra, SKU, ID Cliente, Qtd Vendida, ID Loja.
+
+Base de Vendas 2021 tem as colunas: Data da Venda, Ordem de Compra, SKU, ID Cliente, Qtd Vendida, ID Loja.
+
+Base de Devolução tem as colunas: Data Devolução, ID Loja, SKU, Qtd Devolvida, Motivo Devolução.
+
+Cadastro de Lojas tem as colunas: ID Loja, Nome da Loja, Quantidade Colaboradores, Tipo, ID Localidade, Gerente Loja, Documento Gerente.
+
+Cadastro de Clientes tem as colunas: ID Cliente, Primeiro Nome, Sobrenome, Email, Genero, Data Nascimento, Estado Civil, Num Filhos. Nivel Escolar, Documento.
+
+Cadastro de Clientes tem as colunas: SKU, Produto, Marca, Tipo de Produto, Preço Unitario, Custo Unitario.
+
+Cadastro de Localidades tem as colunas: ID Localidade, País, Continente.
+
+Faturamento 202X = SUMX('Base de Vendas 202X', 'Base de Vendas 202X'[Qtd Vendida] * RELATED('Cadastro de Produtos'[Preço Unitario]))
